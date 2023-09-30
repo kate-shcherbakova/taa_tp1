@@ -1,15 +1,7 @@
 package jpa;
 
 
-import dao.DAO;
-import dao.ProfDao;
-import dao.RdvDao;
-import dao.StudentDao;
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityTransaction;
-import jpa.business.Prof;
-import jpa.business.Rdv;
-import jpa.business.Student;
 
 public class JpaTest {
 
@@ -34,17 +26,18 @@ public class JpaTest {
 //		EntityTransaction transaction = manager.getTransaction();
 //		transaction.begin();
 
-		StudentDao studentDao = new StudentDao();
-		Student student = new Student("Oleksii", "345");
-		studentDao.save(student);
-
-		ProfDao profDao = new ProfDao();
-		Prof prof = new Prof("Olivier", "istic");
-		profDao.save(prof);
-
-		RdvDao rdvDao = new RdvDao();
-		Rdv rdv = new Rdv("Questions", Long.valueOf(60));
-		rdvDao.save(rdv);
+//		// IT WORKS WELL, IT SAVES THE DATA INTO THE DB
+//		StudentDao studentDao = new StudentDao();
+//		Student student = new Student("Oleksii", "345");
+//		studentDao.save(student);
+//
+//		ProfDao profDao = new ProfDao();
+//		Prof prof = new Prof("Olivier", "istic");
+//		profDao.save(prof);
+//
+//		RdvDao rdvDao = new RdvDao();
+//		Rdv rdv = new Rdv("Questions", Long.valueOf(60));
+//		rdvDao.save(rdv);
 
 		try {
 //			dao.populateStudents();

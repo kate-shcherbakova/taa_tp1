@@ -1,12 +1,16 @@
 package jpa.business;
 
+import com.google.gson.annotations.Expose;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
 
+import com.google.gson.annotations.SerializedName;
+
 @Entity
 public class Rdv implements Serializable {
 
+    //    @SerializedName("rdvId")
     private Long id;
 
     private String title;
@@ -16,8 +20,10 @@ public class Rdv implements Serializable {
 
     private Long duration;
 
+    @Expose(serialize = false, deserialize = false)
     private Prof prof;
 
+    @Expose(serialize = false, deserialize = false)
     private Student student;
 
     public Rdv(String title, Long duration) {
@@ -72,8 +78,6 @@ public class Rdv implements Serializable {
     public void setProf(Prof prof) {
         this.prof = prof;
     }
-
-
 
 }
 

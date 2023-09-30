@@ -4,11 +4,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Inheritance;
+import com.google.gson.annotations.SerializedName;
 
 @Entity
 @Inheritance
 public class User {
 
+    @SerializedName("userId")
     private Long id;
 
     private String name;

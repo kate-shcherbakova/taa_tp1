@@ -5,9 +5,9 @@ import jpa.business.Prof;
 import jpa.business.Student;
 import jpa.business.User;
 
-public class DAO {
+public class OldDao {
     private EntityManager manager;
-    public DAO(EntityManager manager) {
+    public OldDao(EntityManager manager) {
         this.manager = manager;
     }
 
